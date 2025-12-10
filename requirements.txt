@@ -1,2 +1,3 @@
 browser-cookie3
 regex
+z3-solver

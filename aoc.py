@@ -6,6 +6,19 @@ def get_max_size(grid):
     max_r = max(y for x, y in grid)
     return max_r, max_c
 
+def get_size(grid):
+    min_c,min_r, max_c,max_r = [None]  *4  
+    for (c,r) in grid:
+        if min_c is None or c < min_c:
+            min_c = c
+        if min_r is None or r < min_r:
+            min_r = r
+        if max_c is None or c > max_c:
+            max_c = c
+        if max_r is None or r > max_r:
+            max_r = r
+    return min_c, min_r, max_c, max_r
+
 
 def get_s_grid(grid):
     min_c = min(x for x, y in grid)
